@@ -1,9 +1,31 @@
 body {
+    --light-white-color: hsl(204, 43%, 93%);
+    --light-gray-color: hsl(218, 22%, 67%);
+    --white-color: hsl(210, 40%, 98%);
+    --bright-yellow: hsl(71, 73%, 54%); 
+    --blue-color: hsl(197, 58%, 48%);
+    --card-text-color: #ffffff;
+    --card-2: hsl(165, 62%, 43%);
+
     font-family: 'Karla', sans-serif;
     font-size: 16px;
-    background-color: hsl(204, 43%, 93%);
-    color: hsl(218, 22%, 67%);
+    font-weight: 400;
+    background-color: var(--light-white-color);
+    color: var(--card-text-color);
+}
 
+h1 {
+    color: var(--card-2);
+}
+
+.grey {
+    color: var(--light-gray-color);
+}
+
+.bold-s {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
 }
 
 .center {
@@ -15,15 +37,20 @@ body {
 }
 
 .card {
-    background-color: hsl(210, 40%, 98%);
+    background-color: var(--white-color);
     display: flex;
     flex-direction: column;
-    width: 39rem;
+    width: 45rem;
     border-radius: 5px;
+    overflow: hidden;
 }
 
 .card-title {
     padding: 2em;
+}
+
+.card-title h2 {
+    color: var(--bright-yellow);
 }
 
 .card-row {
@@ -37,11 +64,41 @@ body {
 }
 
 .card-price {
-    background-color: hsl(165, 62%, 43%);
-    border-radius: 0 0 0 5px;
+    flex-grow: 1;
+    background-color: var(--card-2);
+
 }
 
 .card-us {
-    background-color: hsl(197, 62%, 43%);
-    border-radius: 0 0 5px 0;
+    flex-grow: 1;
+    background-color: var(--blue-color);
+
+}
+
+input[type=submit] {
+    background-color: var(--bright-yellow);
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
+    color: white;
+}
+
+input:hover {
+    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.06);
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 375px) {
+    body {
+        font-size: 10px;
+    }
 }
